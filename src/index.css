@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  position: relative;
+}
+.heading {
+  font-family: "Play", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.hero-img {
+  background-image: url(https://plus.unsplash.com/premium_photo-1664109999537-088e7d964da2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+}
+.animated-border {
+  animation: borderAnimation 2s linear infinite;
+  border-color: red;
+}
+@keyframes borderAnimation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.hideScroll::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+.glassmorp {
+  background: rgba(62, 58, 185, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15.5px);
+  -webkit-backdrop-filter: blur(15.5px);
+  border-radius: 10px;
+}
+.glassmorp::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: blue;
+  left: -30px;
+  z-index: -10;
+  top: -25px;
+}
+.glassmorp::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: blue;
+  /* left: -30px; */
+  right: -30px;
+  z-index: -10;
+  /* top: -25px; */
+  bottom: -25px;
+}
